@@ -1,85 +1,56 @@
-# CS412-Machine-Learning-Term-Project
 
 
-# User Content Classification and Engagement Prediction
+# CS412 Machine Learning Project: Turkish Instagram Influencers
 
-## Project Overview
 
-This machine learning project focuses on two key tasks:
-1. Predicting the number of likes for user-generated content
-2. Classifying user accounts into specific categories
+## Overview of the Repository
+This repository contains the following key components for the machine learning project:
 
-### Key Features
-- Regression task: Predict like counts using LightGBM
-- Classification task: Categorize accounts using a Voting Classifier
-- Advanced preprocessing and feature engineering techniques
-- Handling of imbalanced datasets
+- `CS412_Project_Report.pdf`: A comprehensive report detailing the project's objectives, data description, methodology, results, and future work.
+- `classification_task.ipynb`: A Jupyter Notebook implementing the classification task to categorize user accounts into different domains.
+- `regression_task.ipynb`: A Jupyter Notebook implementing the regression task to predict the number of likes for user-generated content.
 
-## Project Structure
 
+## Methodology
+The project tackles two main machine learning problems:
+
+1. **Regression Task**: Predicting the number of likes for user-generated content using LightGBM.
+   - Key features include historical user engagement metrics, post characteristics, and logarithmic transformation of the target variable.
+   - The model demonstrated effective performance with a low Log Mean Squared Error.
+
+2. **Classification Task**: Categorizing user accounts into domains using a Voting Classifier.
+   - Preprocessing techniques include text cleaning, TF-IDF vectorization, and handling class imbalance with SMOTE.
+   - The ensemble model, combining Logistic Regression, SVC, and XGBoost, achieved robust classification performance across various categories.
+
+
+## Results
 ### Regression Task
-- **Objective**: Predict the number of likes for a post
-- **Model**: LightGBM Regressor
-- **Key Features**:
-  - Historical user engagement metrics
-  - Post characteristics (comment count, caption length, media type)
-  - Logarithmic transformation of target variable
-
-### Classification Task
-- **Objective**: Categorize user accounts into domains
-- **Model**: Voting Classifier
-  - Logistic Regression
-  - Support Vector Classifier
-  - XGBoost
-- **Preprocessing Techniques**:
-  - Text preprocessing (URL removal, lowercasing)
-  - TF-IDF Vectorization
-  - SMOTE for handling class imbalance
-
-## Performance Metrics
-
-### Regression Results
-- **Log Mean Squared Error**: 0.078
-- **Prediction Range**: 0 to 1,327,989 likes
-- **Zero Predictions**: 534 out of total samples
+- Log Mean Squared Error: 0.078
+- Prediction range: 0 to 1,327,989 likes
+- Number of zero predictions: 534 out of total samples
 
 ### Classification Results
 | Category | Precision | Recall | F1-Score |
 |----------|-----------|--------|----------|
 | Art | 0.23 | 0.08 | 0.12 |
+| Entertainment | 0.45 | 0.40 | 0.42 |
 | Fashion | 0.53 | 0.72 | 0.61 |
+| Food | 0.86 | 0.87 | 0.87 |
+| Gaming | 0.00 | 0.00 | 0.00 |
+| Health and Lifestyle | 0.62 | 0.79 | 0.70 |
+| Mom and Children | 0.71 | 0.40 | 0.51 |
 | Sports | 0.80 | 0.70 | 0.74 |
+| Tech | 0.71 | 0.75 | 0.73 |
+| Travel | 0.67 | 0.64 | 0.66 |
 
-## Key Challenges and Solutions
+**Note**: The model performs well for categories like Food, Sports, and Tech, while struggling with smaller or more niche categories like Gaming and Art.
 
-### Data Preprocessing
-- Handled missing values
-- Applied feature scaling
-- Addressed class imbalance using SMOTE
+Finally, let's add the team contributions:
 
-### Feature Engineering
-- Extracted user-specific trends
-- Created combined features from posts and profiles
-- Used TF-IDF for text feature representation
-
-## Future Work
-- Implement advanced NLP techniques
-- Explore deep learning models
-- Conduct extensive hyperparameter tuning
-- Improve handling of imbalanced classes
-
-## Technologies Used
-- Python
-- Scikit-learn
-- LightGBM
-- XGBoost
-- Pandas
-- NumPy
-
-
-## Contributors
+## Team Contributions
 - Efe Güçlü
 - Irmak Sözen
 - Bora Sacır
 - Murat Ozan Aybak
 - Janset Tunca
+
