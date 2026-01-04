@@ -45,7 +45,6 @@ The project tackles two main machine learning problems:
 
 **Note**: The model performs well for categories like Food, Sports, and Tech, while struggling with smaller or more niche categories like Gaming and Art.
 
-Finally, let's add the team contributions:
 
 ## Team Contributions
 - Efe Güçlü
